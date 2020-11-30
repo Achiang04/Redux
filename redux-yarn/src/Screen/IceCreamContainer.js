@@ -1,14 +1,14 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {buyCake} from '../reduxFeatures';
+import {buyIceCream} from '../reduxFeatures';
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 
-function CakeContainer(props) {
+function IceCreamContainer(props) {
   return (
     <View style={styles.container}>
-      <Text>Number Of Cakes = {props.numOfCakes}</Text>
-      <TouchableOpacity onPress={props.buyCake}>
-        <Text style={styles.buyBtn}>Buy Cake</Text>
+      <Text>Number Of Ice Creams = {props.numOfIceCream}</Text>
+      <TouchableOpacity onPress={props.buyIceCream}>
+        <Text style={styles.buyBtn}>Buy Ice Cream</Text>
       </TouchableOpacity>
     </View>
   );
@@ -16,13 +16,13 @@ function CakeContainer(props) {
 
 const mapStateToProps = (state) => {
   return {
-    numOfCakes: state.cake.numOfCakes,
+    numOfIceCream: state.iceCream.numOfIceCream,
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    buyCake: () => dispatch(buyCake()),
+    buyIceCream: () => dispatch(buyIceCream()),
   };
 };
 
@@ -39,4 +39,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(CakeContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(IceCreamContainer);
