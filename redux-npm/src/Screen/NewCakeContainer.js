@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {connect} from 'react-redux';
 import {buyCake} from '../reduxFeatures';
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 
-function CakeContainer(props) {
+function NewCakeContainer(props) {
   return (
     <View style={styles.container}>
       <Text>Number Of Cakes = {props.numOfCakes}</Text>
@@ -39,4 +39,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(CakeContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(NewCakeContainer);

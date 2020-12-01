@@ -4,7 +4,7 @@ import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import {buyCake} from '../reduxFeatures';
 
 export default function HooksCakeContainer() {
-  const numOfCakes = useSelector((state) => state.cake.numOfCakes);
+  const numOfCakes = useSelector((state) => state.numOfCakes);
   const dispatch = useDispatch();
   return (
     <View style={styles.container}>
