@@ -6,7 +6,7 @@ import NewCakeContainer from '../../Screen/NewCakeContainer';
 import ColaContainer from '../../Screen/ColaContainer';
 import IceCreamContainer from '../../Screen/IceCreamContainer';
 import ItemContainer from '../../Screen/ItemContainer';
-import userContainer from '../../Screen/userContainer';
+import usersContainer from '../../Screen/UsersContainer';
 
 const Stack = createStackNavigator();
 
@@ -20,7 +20,7 @@ export default function StackScreen() {
       <Stack.Screen name="IceCreamContainer" component={IceCreamContainer} />
       <Stack.Screen name="ItemContainer" component={ItemContainer} />
       <Stack.Screen name="ItemContainer" component={ItemContainer} cake />
-      <Stack.Screen name="userContainer" component={userContainer} />
+      <Stack.Screen name="usersContainer" component={usersContainer} />
     </Stack.Navigator>
   );
 }
