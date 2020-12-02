@@ -5,7 +5,12 @@ import {buyCake, buyIceCream} from '../reduxFeatures';
 
 function ItemContainer(props) {
   return (
-    <View>
+    <View style={styles.container}>
+      <Text>
+        Alasan kenapa ini failed karena aku ga tau cara masukin parameter di
+        stack screen contoh perbedaanya bisa di liat di app js
+        react-demo-tutorial
+      </Text>
       <Text>Item = {props.item}</Text>
       <TouchableOpacity onPress={props.buyItem}>
         <Text style={styles.buyBtn}>Buy Items</Text>
@@ -35,10 +40,13 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 };
 
 const styles = StyleSheet.create({
+  container: {
+    alignSelf: 'center',
+    marginTop: 30,
+  },
   buyBtn: {
     marginTop: 20,
     borderWidth: 1,
-    alignSelf: 'center',
     padding: 5,
   },
 });

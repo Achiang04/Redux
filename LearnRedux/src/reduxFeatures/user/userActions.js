@@ -28,6 +28,7 @@ export const fetchUsers = () => {
       .get('https://jsonplaceholder.typicode.com/users')
       .then((response) => {
         const users = response.data;
+        // console.log('actions', users);
         dispatch(fetchUsersSuccess(users));
       })
       .catch((error) => {

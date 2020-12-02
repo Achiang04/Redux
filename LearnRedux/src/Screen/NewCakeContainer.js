@@ -17,7 +17,7 @@ function CakeContainer(props) {
       <TextInput
         value={number}
         onChangeText={(e) => setNumber(e)}
-        placeholder={'Text Here ...'}
+        placeholder={'Enter The Number Of Cake'}
       />
       <TouchableOpacity onPress={() => props.buyCake(number)}>
         <Text style={styles.buyBtn}>Buy {number} Cake</Text>
@@ -28,7 +28,7 @@ function CakeContainer(props) {
 
 const mapStateToProps = (state) => {
   return {
-    numOfCakes: state.numOfCakes,
+    numOfCakes: state.cake.numOfCakes,
   };
 };
 

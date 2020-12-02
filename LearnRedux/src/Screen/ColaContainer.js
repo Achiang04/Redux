@@ -16,7 +16,7 @@ function ColaContainer(props) {
 
 const mapStateToProps = (state) => {
   return {
-    numOfCola: state.numOfCola,
+    numOfCola: state.cola.numOfCola,
   };
 };
 

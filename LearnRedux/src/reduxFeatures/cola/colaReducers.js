@@ -1,4 +1,4 @@
-import {BUY_CAKE} from './colaTypes';
+import {BUY_COLA} from './colaTypes';
 
 const initialState = {
   numOfCola: 30,
@@ -6,8 +6,9 @@ const initialState = {
 
 const colaReducers = (state = initialState, action) => {
   switch (action.type) {
-    case BUY_CAKE:
+    case BUY_COLA:
       return {
+        ...state,
         numOfCola: state.numOfCola - 1,
       };
     default:
